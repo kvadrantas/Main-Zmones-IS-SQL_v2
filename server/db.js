@@ -6,7 +6,6 @@ const OPTIONS = {
   acquireTimeout  : 60 * 60 * 1000,
   timeout         : 60 * 60 * 1000,
   host: process.env.Hostname,
-  port: process.env.Port,
   user: process.env.Username,
   password: process.env.Password,
   database: process.env.Database,
