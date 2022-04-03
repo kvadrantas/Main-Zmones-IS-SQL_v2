@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <title>Apskaita</title>
+</head>
+
+<div class="top-navigation">
+    <form method="get" action="/zmones">
+        <button class="{{#if visizmonesBtn}}active{{/if}}" type="submit">Visi žmonės</button>
+    </form>
+    <form method="get" action="/zmogus">
+        <button class="{{#if naujaszmogusBtn}}active{{/if}}" type="submit">Naujas žmogus</button>
+    </form>
+        <form method="get" action="/report/pagalMiestus">
+        <button class="{{#if ataskaita}}active{{/if}}" type="submit">Ataskaitos</button>
+    </form>
+    {{#if zmogus}}
+    <a class="button {{#if adresasBtn}}active{{/if}}" href="/adresas?zmogusId={{zmogus.id}}">Naujas adresas</a>
+    <a class="button {{#if kontaktasBtn}}active{{/if}}" href="/kontaktas?zmogusId={{zmogus.id}}">Naujas kontaktas</a>
+    {{/if}}
+     {{#if showBtn}}
+    <a class="button {{#if adresasBtn}}active{{/if}}" href="/adresas?zmogusId={{zmogus.id}}">Naujas adresas</a>
+    <a class="button {{#if kontaktasBtn}}active{{/if}}" href="/kontaktas?zmogusId={{zmogus.id}}">Naujas kontaktas</a>
+    {{/if}}
+    {{#if ataskaita}}
+    <div class="top-navigation">
+      <a class="button {{#if pagalmiestusBtn}}active{{/if}}" href="/report/pagalMiestus">Pagal miestus</a>
+      <a class="button {{#if top3Btn}}active{{/if}}" href="/report/topAtlyginimai">Top 3 atlyginimai</a>
+      <a class="button {{#if pagaldataBtn}}active{{/if}}" href="/report/pagalGimData">Pagal gimimo datą</a>
+    </div>
+    {{/if}}
+</div>
+
+<body>
+  {{{body}}}
+</body>
+</html>

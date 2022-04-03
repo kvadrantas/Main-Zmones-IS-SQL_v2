@@ -1,0 +1,26 @@
+<h2>Adresas:</h2>
+<form action="/adresas" method="post">
+  {{#if adresas}}
+  <input type="hidden" name="id" value="{{adresas.id}}">
+  <input type="hidden" name="zmogusId" value="{{adresas.zmones_id}}">
+  {{/if}}
+  {{#if zmogusId}}
+  <input type="hidden" name="zmogusId" value="{{zmogusId}}">
+  {{/if}}
+
+<label for="adresas">Adresas<span>*</span></label><input required id="adresas" type="text" name="adresas" value="{{adresas.adresas}}"><br>
+<label for="miestas">Miestas<span>*</span></label><input required onfocusout="hasSpecChar('miestas', 'Miestas')" id="miestas" type="text" name="miestas" value="{{adresas.miestas}}"><br>
+<label for="valstybe">Šalies kodas<span>*</span></label><input required onfocusout="hasSpecChar('valstybe', 'Šalies kodas')" maxlength="3" id="valstybe" type="text" name="valstybe" value="{{adresas.valstybe}}"><br>
+<label class="hidden" for="pastoKodas">Pašto kodas<span>*</span></label><input class="hidden" id="pastoKodas" type="text" name="pastoKodas" value="{{adresas.pasto_kodas}}"><br>
+
+  {{!-- <input type="submit" value="Saugoti"> --}}
+  <button class="form-button" type="submit">Saugoti</button>
+  <a class="form-button" href="/zmogus/{{zmogusId}}{{#if adresas}}{{adresas.zmones_id}}{{/if}}">Atšaukti</a>
+  {{!-- <form method="get" action="/zmogus/{{adresas.zmones_id}}">
+        <button class="form-button" type="submit">Atšaukti</button>
+  </form> --}}
+</form>
+<script src="/public/js/clientSideDataValidation.js"></script>
+
+
+

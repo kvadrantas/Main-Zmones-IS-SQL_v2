@@ -1,0 +1,24 @@
+<h2>Pagal gimimo datą:</h2>
+<form method="post">
+ <label for="nuo">Nuo:</label><input id="nuo" type="date" name="nuo" value="{{dateFormat nuo}}"><br>
+ <label for="iki">Iki:</label><input id="iki" type="date" name="iki" value="{{dateFormat iki}}"><br>
+<button class="form-button" type="submit">Ieškoti</button><br>
+</form>
+<hr>
+
+<table>
+    <tr>
+        <th>Miestas</th>
+        <th>Viso žmonių</th>
+        <th>Gimimo data</th>
+        <th>Alga</th>
+    </tr>
+{{#each ataskaita}}
+    <tr>
+        <td>{{vardas}}</td>
+        <td>{{pavarde}}</td>
+        <td>{{dateFormat gim_data}}</td>
+        <td>{{alga}}</td>
+    </tr>
+{{/each}}
+</table>

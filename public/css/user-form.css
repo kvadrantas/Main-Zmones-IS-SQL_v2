@@ -1,0 +1,80 @@
+/* body * {border: 1px solid red;} */
+label {
+    display: inline-block;
+    width: 100px;
+    color: #a38b80;
+    text-transform: capitalize;
+    text-align: right;
+    margin-right: 15px;
+    font: normal 15px/22px Helvetica, Arial, sans-serif;
+}
+
+label span {
+    color: red;
+}
+
+input, select {
+    height: 24px;
+    width: 300px;
+    border: 1px solid #bcd8db;
+    background-color: #EBF8F2;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 13px 10px 13px 10px;
+    margin-bottom: 7px;
+}
+
+select {
+    height: 50px;
+    width: 320px;
+    margin-left: -3px;
+    padding-left: 6px;
+}
+
+aaa {
+    border-bottom: 1px solid #EBE7E2;
+    padding: 0 0 2px;
+}
+
+.form-button {
+    /* height: 18px; */
+    margin: 25px 10px 25px 0;
+    color: #fff;
+    background: none #EE7023;
+    border: 1px solid #EE7023;
+    font: 18px/1 Helvetica, Arial, sans-serif;
+    transition: color 0.3s ease-out;
+    display: inline-block;
+    padding: 13px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.left-pane, .right-pane {
+    float: left;
+}
+
+.left-pane {
+    margin-right: 100px;
+}
+
+/* asmenine informacija */
+/* gyvenamoji vieta/kontaktai */
+
+@media (max-width: 1000px) {
+    .left-pane .right-pane {
+        display: block;
+    }
+}
+
+@media (max-width: 470px) {
+    label {
+        text-align: left;
+   }
+   td {
+       padding: 5px 5px;
+   }
+   select {
+    margin-left: 0;
+}
+}

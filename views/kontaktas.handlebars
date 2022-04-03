@@ -1,0 +1,30 @@
+<h2>Kontaktas:</h2>
+<form action="/kontaktas" method="post">
+  {{#if kontaktas}}
+  <input type="hidden" name="id" value="{{kontaktas.id}}">
+  <input type="hidden" name="zmogusId" value="{{kontaktas.zmones_id}}">
+  {{/if}}
+  {{#if zmogusId}}
+  <input type="hidden" name="zmogusId" value="{{zmogusId}}">
+  {{/if}}
+
+<label for="tipas">Tipas<span>*</span></label>
+<select required id="tipas" name="tipas" type="text">
+  <option value="email">email</option>
+  <option value="mob">mob</option>
+  <option value="Facebook">Facebook</option>
+  <option value="LinkedIn">LinkedIn</option>
+</select><br>
+
+{{!-- <input id="tipas" type="text" name="tipas" value="{{kontaktas.tipas}}"><br> --}}
+<label for="reiksme">Reikšmė<span>*</span></label><input required id="reiksme" type="text" name="reiksme" value="{{kontaktas.reiksme}}"><br>
+
+  {{!-- <input type="submit" value="Saugoti"> --}}
+  <button class="form-button" type="submit">Saugoti</button>
+  <a class="form-button" href="/zmogus/{{zmogusId}}{{#if kontaktas}}{{kontaktas.zmones_id}}{{/if}}">Atšaukti</a>
+  {{!-- <form method="get" action="/zmogus/{{adresas.zmones_id}}">
+        <button class="form-button" type="submit">Atšaukti</button>
+  </form> --}}
+</form>
+
+

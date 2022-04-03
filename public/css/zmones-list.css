@@ -1,0 +1,123 @@
+body {
+    width: 96%;
+    margin-top: 20px;
+    margin-left: 1.5%;
+}
+
+h1, h2 {
+    display: block;
+    color: #f35b1c;
+    font-weight: 400;
+    font-style: italic;
+    margin: 30px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 32px;
+}
+
+h2 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 25px;
+    border-bottom: 1px solid #f35b1c;
+    width: 300px;
+}
+
+h3 {
+    font: normal 15px/18px Helvetica, Arial, sans-serif;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.top-navigation {
+    display: inline-block;
+    width: 100%;
+}
+
+.top-navigation button, .button {
+    height: 45px;
+    width: 160px;
+    font: 15px/1 Helvetica, Arial, sans-serif;
+    color: #512b2b;
+    background-color: #ebe7e2;
+    border: 1px solid #fff;
+    margin: 0;
+    float: left;
+    padding: 1px 0;
+    transition: background-color .3s ease-out;
+}
+
+.top-navigation a {
+    text-decoration: none;
+    line-height: 41px;
+    height: 41px;
+    width: 158px;
+    text-align: center;
+}
+
+.top-navigation .active {
+    background-color: #fdc129;
+}
+
+.top-navigation button:hover,
+.button:hover {
+    background-color: #fdc129;
+}
+
+.zmones-list label {
+    display: inline-block;
+    width: 100px;
+}
+
+.form-navigation {
+    margin-top: 30px;
+}
+
+.form-button {
+    margin-right: 15px;
+}
+
+table {
+    /* min-width: 830px; */
+    margin-top: 20px;
+    border: 0;
+    border-spacing: 0;
+}
+
+th {
+    background-color: #e9f7fb;
+    height: 48px;
+    color: #257886;
+    font: normal 15px/18px Helvetica, Arial, sans-serif;
+    padding: 0 20px;
+}
+
+th::first-letter {
+    text-transform: capitalize;
+}
+
+td {
+    border-top: 1px solid #ebe7e2;
+    padding: 13px 20px;
+    line-height: 22px;
+    text-align: left;
+    color: #512b2b;
+}
+
+td a {
+    color: #512b2b;
+    text-decoration: none;
+}
+
+td i {
+    font-size: 16px;
+}
+
+td i:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a {
+    font-style: italic;
+    color: #512b2b;
+}

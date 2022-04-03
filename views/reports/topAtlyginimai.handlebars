@@ -1,0 +1,17 @@
+<h2>Top 3 atyginimai:</h2>
+<table>
+    <tr>
+        <th>Miestas</th>
+        <th>Viso žmonių</th>
+        <th>Gimimo data</th>
+        <th>Alga</th>
+    </tr>
+{{#each ataskaita}}
+    <tr>
+        <td>{{vardas}}</td>
+        <td>{{pavarde}}</td>
+        <td>{{dateFormat gim_data}}</td>
+        <td>{{alga}}</td>
+    </tr>
+{{/each}}
+</table>
