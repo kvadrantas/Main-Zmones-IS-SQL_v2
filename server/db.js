@@ -1,6 +1,10 @@
 import * as mysql from "mysql";
 
 const OPTIONS = {
+  connectionLimit : 1000,
+  connectTimeout  : 60 * 60 * 1000,
+  acquireTimeout  : 60 * 60 * 1000,
+  timeout         : 60 * 60 * 1000,
   host: process.env.Hostname,
   port: process.env.Port,
   user: process.env.Username,
