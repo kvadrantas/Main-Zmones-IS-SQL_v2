@@ -2,10 +2,10 @@ import * as mysql from "mysql";
 
 const OPTIONS = {
   host: process.env.Hostname,
+  port: process.env.Port,
   user: process.env.Username,
   password: process.env.Password,
   database: process.env.Database,
-  port: process.env.Port,
   multipleStatements: true,
 };
 
@@ -15,6 +15,7 @@ function connect() {
   return new Promise((resolve, reject) => {
     pool.getConnection((err, conn) => {
       if (err) {
+        console.log('KLAIDA: ', err);
         return reject(err);
       }
       resolve(conn);
