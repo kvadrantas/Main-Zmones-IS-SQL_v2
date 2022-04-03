@@ -1,10 +1,11 @@
 import * as mysql from "mysql";
 
 const OPTIONS = {
-  host: process.env.host,
-  user: process.env.user,
-  password: process.env.password,
-  database: process.env.database,
+  host: process.env.Hostname,
+  user: process.env.Username,
+  password: process.env.Password,
+  database: process.env.Database,
+  port: process.env.Port,
   multipleStatements: true,
 };
 
